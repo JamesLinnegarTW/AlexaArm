@@ -1,0 +1,27 @@
+service: RobotArm
+
+provider:
+  name: aws
+  runtime: nodejs4.3
+
+package:
+  include:
+    - index.js
+    - node_modules/**
+    - lib/**
+    - data/**
+  exclude:
+    - package.json
+    - .env
+    - .travis.yml
+    - .DS_Store
+
+functions:
+  MoveArm:
+    handler: index.handler
+    events:
+      - alexaSkill
+    environment:
+      APPID: ${env:APPID}
+      IOT_BROKER_REGION: ${env:IOT_BROKER_REGION}
+      IOT_BROKER_ENDPOINT: ${env:IOT_BROKER_ENDPOINT}
