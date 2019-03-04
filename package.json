@@ -5,15 +5,16 @@
   "main": "index.js",
   "dependencies": {
     "alexa-sdk": "^1.0.10",
+    "ask-sdk": "^2.3.0",
     "aws-sdk": "^2.212.1",
     "moment-timezone": "^0.5.13",
-    "request": "^2.81.0",
+    "request": "^2.88.0",
     "similarity": "^1.1.1"
   },
   "devDependencies": {
     "jasmine": "^2.6.0",
     "lambda-local": "^1.4.2",
-    "serverless": "^1.15.2"
+    "serverless": "^1.37.0"
   },
   "scripts": {
     "test": "jasmine",
